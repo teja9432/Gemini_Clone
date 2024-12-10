@@ -52,7 +52,7 @@ const ContextProvider = (props) => {
       delayPara(i, nextWord + " ");
     }
     setLoading(false);
-    setInput(""); // Ensure input is reset to an empty string
+    setInput(""); 
   };
 
   const contextValue = {
