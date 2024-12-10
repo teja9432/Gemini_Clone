@@ -4,10 +4,10 @@ import { assets } from '../../assets/assets.js';
 import { useContext } from 'react';
 import { context } from '../../context/Context.jsx';
 const Main = () => {
-
-  const {onSent,recentPrompt,showResult,loading,resultData,setInput,input}=useContext(context);
+ 
+  const {onSent,recentPrompt,showResult,loading,resultData,setInput,input,setRecentPrompt}=useContext(context);
   return (
-   
+    
       <div className="main">
         <div className="nav">
           <p>Gemini</p>
@@ -21,19 +21,19 @@ const Main = () => {
           </div>
           <div className="cards">
             <div className="card">
-              <p>Suggest beautiful places to see on upcoming road trip</p>
+              <p onClick={() => onSent("Suggest beautiful places to see on upcoming road trip")}>Suggest beautiful places to see on upcoming road trip</p>
               <img src={assets.compass_icon} alt="" />
             </div>
             <div className="card">
-              <p>Briefly summarize this concept: urban planning</p>
+              <p onClick={() => onSent("Briefly summarize this concept: urban planning") }>Briefly summarize this concept: urban planning</p>
               <img src={assets.bulb_icon} alt="" />
             </div>
             <div className="card">
-              <p>Brainstorm team bonding activities for our work retreat</p>
+              <p onClick={() => onSent("Brainstorm team bonding activities for our work retreat")}>Brainstorm team bonding activities for our work retreat</p>
               <img src={assets.message_icon} alt="" />
             </div>
             <div className="card">
-              <p>Improve the readability of the following code</p>
+              <p onClick={() => onSent("Improve the readability of the following code")}>Improve the readability of the following code</p>
               <img src={assets.code_icon} alt="" />
             </div>
           </div></>:<div className='result'>
